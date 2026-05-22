@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serwis Muzyczny</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">🎵 MusicRank</a>
+    <div class="d-flex">
+      <button id="nav-login-btn" class="btn btn-outline-light me-2">Logowanie</button>
+      <button id="nav-logout-btn" class="btn btn-danger d-none">Wyloguj</button>
+    </div>
+  </div>
+</nav>
+
+<main class="container mt-5">
+  <section id="auth-view" class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Zaloguj / Zarejestruj</h2>
+          <form id="auth-form">
+            <div class="mb-3">
+              <label for="username" class="form-label">Nazwa użytkownika</label>
+              <input type="text" class="form-control" id="username" required minlength="3">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Hasło</label>
+              <input type="password" class="form-control" id="password" required minlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Zatwierdź</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard-view" class="d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Ranking Albumów</h2>
+      <input type="text" id="search-input" class="form-control w-25" placeholder="Szukaj albumu...">
+    </div>
+
+    <div class="row" id="albums-container">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/300x300?text=Okładka" class="card-img-top" alt="Okładka">
+          <div class="card-body">
+            <h5 class="card-title">Tytuł Albumu</h5>
+            <p class="card-text text-muted">Wykonawca</p>
+            <button class="btn btn-outline-primary btn-sm w-100">Szczegóły / Recenzje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/app.js" type="module"></script>
+</body>
+</html>

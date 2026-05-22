@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Master of Puppets",
+    "artist": "Metallica",
+    "cover": "https://via.placeholder.com/300x300/1a1a1a/ffffff?text=Metallica"
+  },
+  {
+    "id": 2,
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "cover": "https://via.placeholder.com/300x300/000000/ffffff?text=Pink+Floyd"
+  },
+  {
+    "id": 3,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "cover": "https://via.placeholder.com/300x300/ffffff/000000?text=The+Beatles"
+  }
+]
