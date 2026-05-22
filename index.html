@@ -60,6 +60,41 @@
       </div>
     </div>
   </section>
+  <section id="details-view" class="d-none">
+    <button id="back-btn" class="btn btn-secondary mb-3">&larr; Powrót do rankingu</button>
+    <div class="card shadow-sm mb-4">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img id="detail-cover" src="" class="img-fluid rounded-start" alt="Okładka albumu">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 id="detail-title" class="card-title"></h2>
+            <h4 id="detail-artist" class="text-muted"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reviews-section">
+      <h4 class="mb-3">Recenzje</h4>
+      <form id="review-form" class="mb-4">
+        <div class="mb-3">
+          <label class="form-label">Twoja ocena:</label>
+          <select id="review-rating" class="form-select" required>
+            <option value="1">👍 Polecam</option>
+            <option value="-1">👎 Nie polecam</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Treść recenzji (min. 10 znaków):</label>
+          <textarea id="review-text" class="form-control" rows="3" required minlength="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Dodaj recenzję</button>
+      </form>
+      <div id="reviews-list"></div>
+    </div>
+  </section>
 </main>
 
 <script src="js/app.js" type="module"></script>

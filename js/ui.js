@@ -23,4 +23,38 @@ export class UI {
             container.appendChild(col);
         });
     }
+
+    static renderReviews(reviews, currentUser) {
+        const list = document.getElementById('reviews-list');
+        list.innerHTML = '';
+
+        if (reviews.length === 0) {
+            list.innerHTML = '<p class="text-muted">Brak recenzji. Bądź pierwszy!</p>';
+            return;
+        }
+
+        reviews.forEach(r => {
+            const isOwner = r.username === currentUser;
+            const likesCount = r.likedBy.length;
+            const userLiked = r.likedBy.includes(currentUser);
+
+            const div = document.createElement('div');
+            div.className = 'card mb-2 shadow-sm';
+            div.innerHTML = `
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <strong>${r.username} ${r.rating === '1' ? '👍' : '👎'}</strong>
+                        <small class="text-muted">Lajki: <span class="badge bg-secondary">${likesCount}</span></small>
+                    </div>
+                    <p class="mt-2 mb-2">${r.text}</p>
+                    <button class="btn btn-sm ${userLiked ? 'btn-success' : 'btn-outline-success'} like-btn" 
+                            data-review-id="${r.id}" 
+                            ${isOwner ? 'disabled title="Nie możesz lajkować swojej recenzji"' : ''}>
+                        ${userLiked ? 'Odlub' : 'Polub'}
+                    </button>
+                </div>
+            `;
+            list.appendChild(div);
+        });
+    }
 }
