@@ -3,18 +3,56 @@
     "id": 1,
     "title": "Master of Puppets",
     "artist": "Metallica",
-    "cover": "https://via.placeholder.com/300x300/1a1a1a/ffffff?text=Metallica"
+    "year": 1986,
+    "cover": "https://placehold.co/300x300/1a1a1a/deff9a?text=Metallica"
   },
   {
     "id": 2,
     "title": "The Dark Side of the Moon",
     "artist": "Pink Floyd",
-    "cover": "https://via.placeholder.com/300x300/000000/ffffff?text=Pink+Floyd"
+    "year": 1973,
+    "cover": "https://placehold.co/300x300/000033/ffffff?text=Pink+Floyd"
   },
   {
     "id": 3,
     "title": "Abbey Road",
     "artist": "The Beatles",
-    "cover": "https://via.placeholder.com/300x300/ffffff/000000?text=The+Beatles"
+    "year": 1969,
+    "cover": "https://placehold.co/300x300/eeeeee/111111?text=The+Beatles"
+  },
+  {
+    "id": 4,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "year": 1982,
+    "cover": "https://placehold.co/300x300/222222/ff4444?text=Thriller"
+  },
+  {
+    "id": 5,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "year": 1980,
+    "cover": "https://placehold.co/300x300/000000/ffffff?text=AC%2FDC"
+  },
+  {
+    "id": 6,
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "year": 1991,
+    "cover": "https://placehold.co/300x300/0055aa/ffffff?text=Nirvana"
+  },
+  {
+    "id": 7,
+    "title": "Random Access Memories",
+    "artist": "Daft Punk",
+    "year": 2013,
+    "cover": "https://placehold.co/300x300/c8a800/000000?text=Daft+Punk"
+  },
+  {
+    "id": 8,
+    "title": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "year": 2015,
+    "cover": "https://placehold.co/300x300/1a3300/deff9a?text=Kendrick"
   }
 ]

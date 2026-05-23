@@ -1,0 +1,273 @@
+/* =============================================
+   MusicRank — Główny arkusz stylów
+   Motyw: Ciemny + Neonowy zielony
+============================================= */
+
+:root {
+    --bg-dark:    #0b1120;
+    --bg-card:    #131d31;
+    --bg-input:   #0b1120;
+    --accent:     #d4ff6e;
+    --accent-dim: #a8cc50;
+    --text-white: #f0f4ff;
+    --text-muted: #7a8aab;
+    --border:     #1f2e4a;
+    --danger:     #ff5566;
+}
+
+/* === PODSTAWY === */
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+code, .mono {
+    font-family: 'DM Mono', monospace;
+}
+
+/* === NAVBAR === */
+
+.navbar {
+    background-color: rgba(11, 17, 32, 0.95) !important;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+}
+
+/* === KARTY === */
+
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 16px !important;
+    color: var(--text-white) !important;
+}
+
+/* === FORMULARZE === */
+
+.form-control,
+.form-select {
+    background-color: var(--bg-input) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-white) !important;
+    border-radius: 10px !important;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(212, 255, 110, 0.15) !important;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--danger) !important;
+}
+
+.invalid-feedback {
+    color: var(--danger);
+    font-size: 0.82rem;
+    margin-top: 4px;
+}
+
+/* Opcje w select muszą być ciemne */
+.form-select option {
+    background-color: var(--bg-card);
+    color: var(--text-white);
+}
+
+/* === PRZYCISKI === */
+
+.btn-primary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dim) !important;
+    border-color: var(--accent-dim) !important;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Outline z neonowym akcentem */
+.btn-outline-accent {
+    color: var(--accent) !important;
+    border: 1px solid var(--accent) !important;
+    background: transparent !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s;
+}
+
+.btn-outline-accent:hover,
+.btn-outline-accent.active {
+    background-color: var(--accent) !important;
+    color: #000 !important;
+}
+
+/* Przycisk filtru (aktywny) */
+.filter-btn.active {
+    background-color: var(--accent) !important;
+    color: #000 !important;
+    border-color: var(--accent) !important;
+}
+
+/* Przycisk niebezpieczny */
+.btn-danger {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+}
+
+/* === SPINNER === */
+
+.spinner-border {
+    color: var(--accent) !important;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* === TOASTY (powiadomienia) === */
+
+.toast-container {
+    position: fixed;
+    top: 72px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toast-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 18px;
+    color: var(--text-white);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 260px;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.toast-item.toast-success {
+    border-color: var(--accent);
+}
+
+.toast-item.toast-error {
+    border-color: var(--danger);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* === KARTY ALBUMÓW === */
+
+.album-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+    overflow: hidden;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(212, 255, 110, 0.12) !important;
+    border-color: var(--accent) !important;
+}
+
+.album-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0 !important;
+}
+
+/* === KARTA RECENZJI === */
+
+.review-card {
+    background-color: #0e1828 !important;
+    border-radius: 12px !important;
+}
+
+/* === PROFIL UŻYTKOWNIKA === */
+
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #4ade80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    flex-shrink: 0;
+}
+
+/* === POMOCNICZE KLASY === */
+
+.text-accent  { color: var(--accent) !important; }
+.text-muted   { color: var(--text-muted) !important; }
+.border-accent { border-color: var(--accent) !important; }
+
+/* === RESPONSYWNOŚĆ === */
+
+@media (max-width: 576px) {
+    .d-flex.gap-3.align-items-center {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    #search-input {
+        max-width: 100% !important;
+    }
+
+    .album-card .card-img-top {
+        height: 160px;
+    }
+}
+
+/* === SCROLLBAR === */
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
